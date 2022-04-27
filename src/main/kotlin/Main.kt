@@ -1,10 +1,10 @@
 fun main() {
     println("Количество лайков")
     val likes = readLine()?.toInt() ?: return
-    val lastChar = likes % 10
-    if (lastChar == 1)
-        println("Понравилось $likes человеку")
-    else
+    if ((likes % 100 == 11) || (likes % 10 in 2..9) || (likes % 10 == 0)) {
         println("Понравилось $likes людям")
+    } else {
+        println("Понравилось $likes человеку ")
+    }
 }
 
